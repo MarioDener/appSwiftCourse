@@ -34,8 +34,13 @@ class WelcomeViewController: UIViewController {
         botonSignup?.setTitleColor(UIColor.red, for: .normal)
         botonSignup?.sizeToFit()
         botonSignup?.frame = CGRect(x: 20, y: self.view.frame.size.height - 15 - 20, width: self.view.frame.size.width - 40, height: 20)
+        botonSignup?.addTarget(self, action: #selector(signupPressed(sender:)), for: .touchUpInside)
         self.view.addSubview(botonSignup!)
         
+    }
+    
+    func signupPressed(sender: UIButton) {
+        print("Presiono \(sender.title(for: .normal)!)")
     }
     
     
