@@ -40,12 +40,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VV3-H0-Ci0">
-                                <rect key="frame" x="137" y="110" width="101" height="30"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cfK-Mq-AXa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="566"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="View"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jiv-js-IBJ">
+                                <rect key="frame" x="288" y="574" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Adelante"/>
                                 <connections>
-                                    <action selector="presentarNuevaVista:" destination="VAg-QQ-1Ui" eventType="touchUpInside" id="lVM-OK-ScY"/>
+                                    <action selector="movimientoPresionado:" destination="VAg-QQ-1Ui" eventType="touchUpInside" id="k7t-ws-Z6x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AtO-v3-ASS">
+                                <rect key="frame" x="16" y="574" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Atras"/>
+                                <connections>
+                                    <action selector="movimientoPresionado:" destination="VAg-QQ-1Ui" eventType="touchUpInside" id="pWC-yz-B1n"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -53,6 +65,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" id="S5n-qO-mYp"/>
                     <connections>
+                        <outlet property="scrollView" destination="cfK-Mq-AXa" id="Qk4-C0-VkE"/>
                         <segue destination="BGG-LA-5Ng" kind="presentation" identifier="nuevaVista" id="wk9-ws-gl4"/>
                     </connections>
                 </viewController>
