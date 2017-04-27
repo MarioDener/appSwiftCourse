@@ -30,6 +30,15 @@ class platzigramTabBarController: UITabBarController {
         self.viewControllers?.append(newController)
         
         self.viewControllers![1].title = "Home"
+        
+        if (UserDefaults.standard.value(forKey: "userToken") == nil ) {
+            
+            self.performSegue(withIdentifier: "register", sender: nil)
+            
+        }
+        // ./ if userdefaul
+        
+        
     }
     
     

@@ -42,5 +42,10 @@ class RegisterViewController: UITableViewController {
         }
     }
     @IBAction func signupButtonPressed(_ sender: UIButton) {
+        UserDefaults.standard.setValue("931993", forKey: "userToken")
+        UserDefaults.standard.synchronize()
+        
+        // quito esta vista
+        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
     }
 }

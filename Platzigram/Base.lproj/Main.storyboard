@@ -26,12 +26,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-908" y="-393"/>
+            <point key="canvasLocation" x="2817" y="-362"/>
         </scene>
-        <!--View Controller-->
+        <!--Profeli View Controller-->
         <scene sceneID="VFP-j9-7AD">
             <objects>
-                <viewController id="VAg-QQ-1Ui" sceneMemberID="viewController">
+                <viewController id="VAg-QQ-1Ui" customClass="ProfeliViewController" customModule="Platzigram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NO8-C1-prx"/>
                         <viewControllerLayoutGuide type="bottom" id="bpY-jY-h04"/>
@@ -39,13 +39,54 @@
                     <view key="view" contentMode="scaleToFill" id="QHE-Hf-TIP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VV3-H0-Ci0">
+                                <rect key="frame" x="137" y="110" width="101" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="View"/>
+                                <connections>
+                                    <action selector="presentarNuevaVista:" destination="VAg-QQ-1Ui" eventType="touchUpInside" id="lVM-OK-ScY"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" id="S5n-qO-mYp"/>
+                    <connections>
+                        <segue destination="BGG-LA-5Ng" kind="presentation" identifier="nuevaVista" id="wk9-ws-gl4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="73K-Zr-aeL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="44" y="947"/>
+            <point key="canvasLocation" x="44" y="946.77661169415296"/>
+        </scene>
+        <!--Nueva Vista View Controller-->
+        <scene sceneID="Rnm-Et-RFN">
+            <objects>
+                <viewController id="BGG-LA-5Ng" customClass="NuevaVistaViewController" customModule="Platzigram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="670-hs-dLG"/>
+                        <viewControllerLayoutGuide type="bottom" id="2c2-vI-zhe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eSx-sk-fRx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c1c-OB-Ggg">
+                                <rect key="frame" x="164" y="108" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="cerarVista:" destination="BGG-LA-5Ng" eventType="touchUpInside" id="DEJ-3e-sab"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cdn-uh-wzh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="806" y="947"/>
         </scene>
         <!--Feed-->
         <scene sceneID="2cB-Y7-qP8">
@@ -75,7 +116,7 @@
             </objects>
             <point key="canvasLocation" x="983.20000000000005" y="290.10494752623691"/>
         </scene>
-        <!--Title-->
+        <!--Search-->
         <scene sceneID="To1-ZW-rPA">
             <objects>
                 <viewController id="QRE-yd-EHd" sceneMemberID="viewController">
@@ -88,7 +129,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="apf-oG-DJZ"/>
+                    <navigationItem key="navigationItem" title="Search" id="apf-oG-DJZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bOe-w0-YNG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -106,6 +147,7 @@
                     <connections>
                         <segue destination="IgC-dM-C3c" kind="relationship" relationship="viewControllers" id="bbD-vJ-Kz0"/>
                         <segue destination="VAg-QQ-1Ui" kind="relationship" relationship="viewControllers" id="QpT-do-LJd"/>
+                        <segue destination="zSe-et-4w3" kind="presentation" identifier="register" id="2vX-MV-WgZ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pwl-aT-HFC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -272,7 +314,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sC6-o1-hsV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="583" y="-394"/>
+            <point key="canvasLocation" x="44" y="-451"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="3b0-a5-Jaj">
@@ -287,10 +329,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="dch-as-NK2" kind="presentation" identifier="signup" modalTransitionStyle="flipHorizontal" id="3gF-3X-KfD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psl-lG-EEc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1300" y="-394"/>
+            <point key="canvasLocation" x="-908" y="-451"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="pSZ-fT-LUE">
