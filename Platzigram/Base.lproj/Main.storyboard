@@ -104,7 +104,7 @@
         <!--Feed-->
         <scene sceneID="2cB-Y7-qP8">
             <objects>
-                <viewController id="COI-NE-OJX" sceneMemberID="viewController">
+                <viewController id="COI-NE-OJX" customClass="PlazigramFeedViewController" customModule="Platzigram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GOb-GI-xnH"/>
                         <viewControllerLayoutGuide type="bottom" id="8hf-ir-RFV"/>
@@ -112,6 +112,52 @@
                     <view key="view" contentMode="scaleToFill" id="ZBj-0s-zwD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="475" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mJN-za-Bbu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newPost" rowHeight="475" id="068-uW-3wx" customClass="PlatzigramPostCell" customModule="Platzigram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="475"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="068-uW-3wx" id="MTj-WC-sLt">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="474"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zZ4-5r-evk">
+                                                    <rect key="frame" x="0.0" y="37" width="375" height="375"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9A-6g-513">
+                                                    <rect key="frame" x="8" y="8" width="359" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIL-A9-HUG">
+                                                    <rect key="frame" x="8" y="420" width="359" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="postImage" destination="zZ4-5r-evk" id="fqu-I8-ZF3"/>
+                                            <outlet property="postTitle" destination="iIL-A9-HUG" id="kLb-xE-6Bp"/>
+                                            <outlet property="userNameLabel" destination="l9A-6g-513" id="0p4-1n-cw7"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="COI-NE-OJX" id="aDg-Cf-BDo"/>
+                                    <outlet property="delegate" destination="COI-NE-OJX" id="26J-HU-8Ps"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Feed" id="Yzv-O6-Ra6">
@@ -124,6 +170,9 @@
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="mJN-za-Bbu" id="nOJ-Mw-jht"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TCX-qc-aRA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -146,7 +195,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bOe-w0-YNG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1783" y="290"/>
+            <point key="canvasLocation" x="1781.5999999999999" y="289.20539730134936"/>
         </scene>
         <!--Platzigram Tab Bar Controller-->
         <scene sceneID="pbV-O5-2Q4">
