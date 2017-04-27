@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD2F65051EB1E3090014D01B /* platzigramTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2F65041EB1E3090014D01B /* platzigramTabBarController.swift */; };
 		CD5BB83B1EB086C500B58FA8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5BB83A1EB086C500B58FA8 /* RegisterViewController.swift */; };
 		CD5BB83D1EB08CF300B58FA8 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5BB83C1EB08CF300B58FA8 /* WelcomeViewController.swift */; };
 		CD921B161EADF5EE00934497 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD921B151EADF5EE00934497 /* AppDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD2F65041EB1E3090014D01B /* platzigramTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = platzigramTabBarController.swift; sourceTree = "<group>"; };
 		CD5BB83A1EB086C500B58FA8 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		CD5BB83C1EB08CF300B58FA8 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		CD921B121EADF5EE00934497 /* Platzigram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Platzigram.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +68,7 @@
 				CD921B211EADF5EE00934497 /* Info.plist */,
 				CD5BB83A1EB086C500B58FA8 /* RegisterViewController.swift */,
 				CD5BB83C1EB08CF300B58FA8 /* WelcomeViewController.swift */,
+				CD2F65041EB1E3090014D01B /* platzigramTabBarController.swift */,
 			);
 			path = Platzigram;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 				CD5BB83B1EB086C500B58FA8 /* RegisterViewController.swift in Sources */,
 				CD5BB83D1EB08CF300B58FA8 /* WelcomeViewController.swift in Sources */,
 				CD921B181EADF5EE00934497 /* ViewController.swift in Sources */,
+				CD2F65051EB1E3090014D01B /* platzigramTabBarController.swift in Sources */,
 				CD921B161EADF5EE00934497 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

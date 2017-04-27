@@ -90,22 +90,7 @@ class WelcomeViewController: UIViewController {
     
     func apretoBoton(sender: UIButton) {
         print("Presiono \(sender.title(for: .normal)!)")
-        /*
-         let alerta = UIAlertController(title: "Sin cuenta", message: "Por el momento no tienes una cuenta", preferredStyle: .actionSheet)
-         let crearCuenta = UIAlertAction(title: "Crear cuenta", style: .default, handler: {
-         actionCrearCuenta in
-         print ("Presiono crear cuenta")
-         })
-         let cancelar = UIAlertAction(title: "Cancelar ", style:.cancel, handler:{
-         accionCancelar in
-         print("Presiono el boto cancelar")
-         
-         })
-         
-         alerta.addAction(cancelar)
-         alerta.addAction(crearCuenta)
-         
-         self.present(alerta, animated: true, completion: nil)*/
+        
         let alerta = UIAlertController(title: "Sin cuenta", message: "Por el momento no tienes una cuenta", preferredStyle: .actionSheet)
         let crearCuenta = UIAlertAction(title: "Crear cueta", style: .default, handler: {
             actionCrearCuenta in
@@ -122,10 +107,7 @@ class WelcomeViewController: UIViewController {
         
         // como presentare mi alert
         self.present(alerta,animated: true,completion: nil)
-//        
-//        if sender .isEqual(botonSignup!){
-//            self.performSegue(withIdentifier: "signup", sender: nil)
-//        }
+
     }
     
     
