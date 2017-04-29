@@ -23,6 +23,10 @@
 		CD921B1B1EADF5EE00934497 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD921B191EADF5EE00934497 /* Main.storyboard */; };
 		CD921B1D1EADF5EE00934497 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD921B1C1EADF5EE00934497 /* Assets.xcassets */; };
 		CD921B201EADF5EE00934497 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD921B1E1EADF5EE00934497 /* LaunchScreen.storyboard */; };
+		CDFA6DB31EB52C8C00A9E391 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDFA6DB21EB52C8C00A9E391 /* MapKit.framework */; };
+		CDFA6DB51EB52D9800A9E391 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA6DB41EB52D9800A9E391 /* MapViewController.swift */; };
+		CDFA6DB71EB52E1800A9E391 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDFA6DB61EB52E1800A9E391 /* CoreLocation.framework */; };
+		CDFA6DB91EB5558500A9E391 /* PrintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA6DB81EB5558500A9E391 /* PrintView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +48,10 @@
 		CD921B1C1EADF5EE00934497 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD921B1F1EADF5EE00934497 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD921B211EADF5EE00934497 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDFA6DB21EB52C8C00A9E391 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		CDFA6DB41EB52D9800A9E391 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		CDFA6DB61EB52E1800A9E391 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CDFA6DB81EB5558500A9E391 /* PrintView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDFA6DB71EB52E1800A9E391 /* CoreLocation.framework in Frameworks */,
+				CDFA6DB31EB52C8C00A9E391 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +72,7 @@
 			children = (
 				CD921B141EADF5EE00934497 /* Platzigram */,
 				CD921B131EADF5EE00934497 /* Products */,
+				CDFA6DB11EB52C8C00A9E391 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +90,8 @@
 				CD921B151EADF5EE00934497 /* AppDelegate.swift */,
 				CD921B171EADF5EE00934497 /* ViewController.swift */,
 				CD921B191EADF5EE00934497 /* Main.storyboard */,
+				CDFA6DB41EB52D9800A9E391 /* MapViewController.swift */,
+				CDFA6DB81EB5558500A9E391 /* PrintView.swift */,
 				CD6863641EB49D2B00045533 /* PlatzigramImageController.swift */,
 				CD6863601EB4938900045533 /* PlatzigramCollectionCell.xib */,
 				CD6863621EB4942B00045533 /* PlatzigramCollectionCell.swift */,
@@ -95,6 +108,15 @@
 				CD2F65041EB1E3090014D01B /* platzigramTabBarController.swift */,
 			);
 			path = Platzigram;
+			sourceTree = "<group>";
+		};
+		CDFA6DB11EB52C8C00A9E391 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CDFA6DB61EB52E1800A9E391 /* CoreLocation.framework */,
+				CDFA6DB21EB52C8C00A9E391 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,7 +199,9 @@
 				CD5BB83D1EB08CF300B58FA8 /* WelcomeViewController.swift in Sources */,
 				CD921B181EADF5EE00934497 /* ViewController.swift in Sources */,
 				CD606BBF1EB25258000942E1 /* PlatzigramPostCell.swift in Sources */,
+				CDFA6DB51EB52D9800A9E391 /* MapViewController.swift in Sources */,
 				CD68635F1EB492FB00045533 /* PlatzigramProfileViewController.swift in Sources */,
+				CDFA6DB91EB5558500A9E391 /* PrintView.swift in Sources */,
 				CD606BC11EB253EE000942E1 /* PlatziFeedViewController.swift in Sources */,
 				CD2F65091EB1F17B0014D01B /* NuevaVistaViewController.swift in Sources */,
 				CD6863631EB4942B00045533 /* PlatzigramCollectionCell.swift in Sources */,
