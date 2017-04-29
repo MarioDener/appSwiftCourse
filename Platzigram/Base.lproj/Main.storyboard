@@ -73,6 +73,45 @@
             </objects>
             <point key="canvasLocation" x="44" y="946.77661169415296"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="tMC-0X-png">
+            <objects>
+                <viewController id="avI-W9-PNb" customClass="PlatzigramProfileViewController" customModule="Platzigram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xDt-nG-sLs"/>
+                        <viewControllerLayoutGuide type="bottom" id="sxq-rw-oEC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ogr-r7-omp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mvo-BK-T4C">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="y6V-h7-M25">
+                                    <size key="itemSize" width="120" height="120"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="avI-W9-PNb" id="Kp2-w5-TtI"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="XY9-Pn-wSI"/>
+                    <connections>
+                        <outlet property="collectionView" destination="mvo-BK-T4C" id="NcI-Oh-orD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bty-6r-Y0v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45.600000000000001" y="1674.5127436281859"/>
+        </scene>
         <!--Nueva Vista View Controller-->
         <scene sceneID="Rnm-Et-RFN">
             <objects>
@@ -122,7 +161,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="475"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="068-uW-3wx" id="MTj-WC-sLt">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="474"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="474.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zZ4-5r-evk">
@@ -210,6 +249,7 @@
                         <segue destination="IgC-dM-C3c" kind="relationship" relationship="viewControllers" id="bbD-vJ-Kz0"/>
                         <segue destination="VAg-QQ-1Ui" kind="relationship" relationship="viewControllers" id="QpT-do-LJd"/>
                         <segue destination="zSe-et-4w3" kind="presentation" identifier="register" id="2vX-MV-WgZ"/>
+                        <segue destination="avI-W9-PNb" kind="relationship" relationship="viewControllers" id="dVa-28-9yS"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pwl-aT-HFC" userLabel="First Responder" sceneMemberID="firstResponder"/>
