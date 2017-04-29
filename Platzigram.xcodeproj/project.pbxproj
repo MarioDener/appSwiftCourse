@@ -17,6 +17,7 @@
 		CD68635F1EB492FB00045533 /* PlatzigramProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD68635E1EB492FB00045533 /* PlatzigramProfileViewController.swift */; };
 		CD6863611EB4938900045533 /* PlatzigramCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD6863601EB4938900045533 /* PlatzigramCollectionCell.xib */; };
 		CD6863631EB4942B00045533 /* PlatzigramCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6863621EB4942B00045533 /* PlatzigramCollectionCell.swift */; };
+		CD6863651EB49D2B00045533 /* PlatzigramImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6863641EB49D2B00045533 /* PlatzigramImageController.swift */; };
 		CD921B161EADF5EE00934497 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD921B151EADF5EE00934497 /* AppDelegate.swift */; };
 		CD921B181EADF5EE00934497 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD921B171EADF5EE00934497 /* ViewController.swift */; };
 		CD921B1B1EADF5EE00934497 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD921B191EADF5EE00934497 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		CD68635E1EB492FB00045533 /* PlatzigramProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatzigramProfileViewController.swift; sourceTree = "<group>"; };
 		CD6863601EB4938900045533 /* PlatzigramCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlatzigramCollectionCell.xib; sourceTree = "<group>"; };
 		CD6863621EB4942B00045533 /* PlatzigramCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatzigramCollectionCell.swift; sourceTree = "<group>"; };
+		CD6863641EB49D2B00045533 /* PlatzigramImageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatzigramImageController.swift; sourceTree = "<group>"; };
 		CD921B121EADF5EE00934497 /* Platzigram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Platzigram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD921B151EADF5EE00934497 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD921B171EADF5EE00934497 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				CD921B151EADF5EE00934497 /* AppDelegate.swift */,
 				CD921B171EADF5EE00934497 /* ViewController.swift */,
 				CD921B191EADF5EE00934497 /* Main.storyboard */,
+				CD6863641EB49D2B00045533 /* PlatzigramImageController.swift */,
 				CD6863601EB4938900045533 /* PlatzigramCollectionCell.xib */,
 				CD6863621EB4942B00045533 /* PlatzigramCollectionCell.swift */,
 				CD68635E1EB492FB00045533 /* PlatzigramProfileViewController.swift */,
@@ -168,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD6863651EB49D2B00045533 /* PlatzigramImageController.swift in Sources */,
 				CD2F65071EB1EFB20014D01B /* ProfileViewController.swift in Sources */,
 				CD5BB83B1EB086C500B58FA8 /* RegisterViewController.swift in Sources */,
 				CD5BB83D1EB08CF300B58FA8 /* WelcomeViewController.swift in Sources */,

@@ -26,12 +26,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2817" y="-362"/>
+            <point key="canvasLocation" x="898" y="-415"/>
         </scene>
-        <!--Profeli View Controller-->
+        <!--Slider-->
         <scene sceneID="VFP-j9-7AD">
             <objects>
-                <viewController id="VAg-QQ-1Ui" customClass="ProfeliViewController" customModule="Platzigram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Slider" id="VAg-QQ-1Ui" customClass="ProfeliViewController" customModule="Platzigram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NO8-C1-prx"/>
                         <viewControllerLayoutGuide type="bottom" id="bpY-jY-h04"/>
@@ -63,7 +63,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" id="S5n-qO-mYp"/>
+                    <tabBarItem key="tabBarItem" title="Slide" id="S5n-qO-mYp"/>
                     <connections>
                         <outlet property="scrollView" destination="cfK-Mq-AXa" id="Qk4-C0-VkE"/>
                         <segue destination="BGG-LA-5Ng" kind="presentation" identifier="nuevaVista" id="wk9-ws-gl4"/>
@@ -71,12 +71,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="73K-Zr-aeL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="44" y="946.77661169415296"/>
+            <point key="canvasLocation" x="940" y="1690"/>
         </scene>
-        <!--Item-->
+        <!--CollectionView-->
         <scene sceneID="tMC-0X-png">
             <objects>
-                <viewController id="avI-W9-PNb" customClass="PlatzigramProfileViewController" customModule="Platzigram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="CollectionView" id="avI-W9-PNb" customClass="PlatzigramProfileViewController" customModule="Platzigram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xDt-nG-sLs"/>
                         <viewControllerLayoutGuide type="bottom" id="sxq-rw-oEC"/>
@@ -103,14 +103,58 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="XY9-Pn-wSI"/>
+                    <tabBarItem key="tabBarItem" title="ProfileC" id="XY9-Pn-wSI"/>
                     <connections>
                         <outlet property="collectionView" destination="mvo-BK-T4C" id="NcI-Oh-orD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bty-6r-Y0v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="45.600000000000001" y="1674.5127436281859"/>
+            <point key="canvasLocation" x="82" y="1690"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="FNI-SK-xOp">
+            <objects>
+                <viewController id="AT5-II-Nfu" customClass="platzigramImageControlle" customModule="Platzigram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k5Z-ss-KB6"/>
+                        <viewControllerLayoutGuide type="bottom" id="27h-7f-OHb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="spm-O1-Ad9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GMD-xd-IQw">
+                                <rect key="frame" x="0.0" y="20" width="375" height="375"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9g-K9-GYC">
+                                <rect key="frame" x="16" y="403" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="abrirCamara:" destination="AT5-II-Nfu" eventType="touchUpInside" id="ib7-kD-Zf6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Dg-pR-YmP">
+                                <rect key="frame" x="16" y="441" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Galeria"/>
+                                <connections>
+                                    <action selector="abrirFotos:" destination="AT5-II-Nfu" eventType="touchUpInside" id="pw1-fQ-dMw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="AUV-gq-3pk"/>
+                    <connections>
+                        <outlet property="imagePreview" destination="GMD-xd-IQw" id="swr-Fj-eCt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BWQ-Ym-YWm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44" y="964.76761619190415"/>
         </scene>
         <!--Nueva Vista View Controller-->
         <scene sceneID="Rnm-Et-RFN">
@@ -138,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cdn-uh-wzh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="806" y="947"/>
+            <point key="canvasLocation" x="1782" y="1690"/>
         </scene>
         <!--Feed-->
         <scene sceneID="2cB-Y7-qP8">
@@ -247,9 +291,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="IgC-dM-C3c" kind="relationship" relationship="viewControllers" id="bbD-vJ-Kz0"/>
-                        <segue destination="VAg-QQ-1Ui" kind="relationship" relationship="viewControllers" id="QpT-do-LJd"/>
                         <segue destination="zSe-et-4w3" kind="presentation" identifier="register" id="2vX-MV-WgZ"/>
-                        <segue destination="avI-W9-PNb" kind="relationship" relationship="viewControllers" id="dVa-28-9yS"/>
+                        <segue destination="AT5-II-Nfu" kind="relationship" relationship="viewControllers" id="JoS-3t-iFf"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pwl-aT-HFC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -439,11 +482,11 @@
             </objects>
             <point key="canvasLocation" x="-908" y="-451"/>
         </scene>
-        <!--Item 1-->
+        <!--Feed-->
         <scene sceneID="pSZ-fT-LUE">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IgC-dM-C3c" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="fC3-FO-kUf"/>
+                    <tabBarItem key="tabBarItem" title="Feed" id="fC3-FO-kUf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ACF-4Q-HkX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

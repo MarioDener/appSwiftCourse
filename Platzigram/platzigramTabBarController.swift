@@ -22,20 +22,17 @@ class platzigramTabBarController: UITabBarController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let newController = UIViewController()
-        newController.view.backgroundColor = UIColor.green
-        newController.title = "Nuevo"
         
+        // codigo para agregar un nuevo item a nuestro tabBar
+//            let newController = UIViewController()
+//            newController.view.backgroundColor = UIColor.green
+//            newController.title = "Nuevo"
         // agreagamos nuestro viewcontroller al tab
-        self.viewControllers?.append(newController)
-        
-        self.viewControllers![1].title = "Home"
-        
-        if (UserDefaults.standard.value(forKey: "userToken") == nil ) {
-            
-            self.performSegue(withIdentifier: "register", sender: nil)
-            
-        }
+//            self.viewControllers?.append(newController)
+//            self.viewControllers![1].title = "Home"
+//            if (UserDefaults.standard.value(forKey: "userToken") == nil ) {
+//                self.performSegue(withIdentifier: "register", sender: nil)
+//            }
         // ./ if userdefaul
         
         
