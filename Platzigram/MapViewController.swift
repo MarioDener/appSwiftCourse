@@ -31,7 +31,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             locationManager.requestWhenInUseAuthorization()
         }
         else if (CLLocationManager.authorizationStatus() == .authorizedWhenInUse) {
-            mapView.showsUserLocation = true
+            // --- M
+            //mapView.showsUserLocation = true
+            locationManager.startUpdatingLocation()
+            locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
+            
             for (latitud,longitud) in coordinates {
                 let newPin = PintView.init(coordinate: CLLocationCoordinate2D(latitude: latitud,longitude: longitud))
                 newPin.setTitle(title: "Pin")
@@ -51,8 +55,19 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if (status == .authorizedWhenInUse) {
-            mapView.showsUserLocation = true
+            // mapView.showsUserLocation = true
+            
+            
+            // Utlizaremos el gps
+            manager.startUpdatingLocation()
+            manager.desiredAccuracy = kCLLocationAccuracyKilometer  // no importa si falla por kilometros
+            
         }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let userLocation = locations.first!
+        etiquetaDireccion.text = "Lat: \(userLocation.coordinate.longitude) Lon: \(userLocation.coordinate.latitude)"
     }
     
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
