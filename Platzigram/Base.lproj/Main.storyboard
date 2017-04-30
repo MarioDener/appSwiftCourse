@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -168,23 +169,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="AMy-Zd-oaV">
+                            <mapView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="AMy-Zd-oaV">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaN-Ts-AnT">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaN-Ts-AnT">
                                 <rect key="frame" x="290" y="629" width="69" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Centrar"/>
                                 <connections>
                                     <action selector="centrarPressed:" destination="KW2-lv-0iE" eventType="touchUpInside" id="3mz-HV-ofl"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AY0-K4-WGK">
+                                <rect key="frame" x="16" y="28" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="direccion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94z-hf-sR4">
+                                <rect key="frame" x="16" y="66" width="343" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AY0-K4-WGK" firstAttribute="leading" secondItem="Xv9-DM-7fZ" secondAttribute="leadingMargin" id="3fR-a8-3Ji"/>
+                            <constraint firstItem="94z-hf-sR4" firstAttribute="trailing" secondItem="Xv9-DM-7fZ" secondAttribute="trailingMargin" id="5gu-an-cBJ"/>
+                            <constraint firstAttribute="trailing" secondItem="AMy-Zd-oaV" secondAttribute="trailing" id="AWR-cG-VYG"/>
+                            <constraint firstItem="AY0-K4-WGK" firstAttribute="top" secondItem="jPc-Rf-mZF" secondAttribute="bottom" constant="8" id="DDR-4H-ukL"/>
+                            <constraint firstItem="AMy-Zd-oaV" firstAttribute="leading" secondItem="Xv9-DM-7fZ" secondAttribute="leading" id="HLo-d9-lS6"/>
+                            <constraint firstItem="AMy-Zd-oaV" firstAttribute="top" secondItem="jPc-Rf-mZF" secondAttribute="bottom" id="HvG-Ng-zEh"/>
+                            <constraint firstItem="2cI-S5-K1K" firstAttribute="top" secondItem="AMy-Zd-oaV" secondAttribute="bottom" id="MAl-OT-dz8"/>
+                            <constraint firstItem="94z-hf-sR4" firstAttribute="leading" secondItem="Xv9-DM-7fZ" secondAttribute="leadingMargin" id="U6E-kk-Gfz"/>
+                            <constraint firstItem="2cI-S5-K1K" firstAttribute="top" secondItem="uaN-Ts-AnT" secondAttribute="bottom" constant="8" id="WHS-a9-lTO"/>
+                            <constraint firstItem="AY0-K4-WGK" firstAttribute="trailing" secondItem="Xv9-DM-7fZ" secondAttribute="trailingMargin" id="hEU-Tm-6Ru"/>
+                            <constraint firstItem="uaN-Ts-AnT" firstAttribute="trailing" secondItem="Xv9-DM-7fZ" secondAttribute="trailingMargin" id="ivm-kf-n6a"/>
+                            <constraint firstItem="94z-hf-sR4" firstAttribute="top" secondItem="AY0-K4-WGK" secondAttribute="bottom" constant="8" id="pfy-d5-X0t"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="centrarButton" destination="uaN-Ts-AnT" id="rB4-Bz-f8O"/>
+                        <outlet property="etiquetaDireccion" destination="94z-hf-sR4" id="whM-XD-sI2"/>
+                        <outlet property="etiquetaDistancia" destination="AY0-K4-WGK" id="54H-Dg-Ba2"/>
                         <outlet property="mapView" destination="AMy-Zd-oaV" id="Vt0-U3-7Th"/>
                     </connections>
                 </viewController>
